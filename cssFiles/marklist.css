@@ -1,0 +1,243 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f0e68c; /* Lightened background color */
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px; /* Ensure content doesn't overlap with fixed header */
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.header img {
+    width: 80px; /* Adjusted logo size */
+    transition: transform 0.3s ease-in-out;
+}
+
+.header img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: .5s;
+}
+
+.header:hover::after {
+    left: 100%;
+}
+
+.mynav a {
+    font-size: 1.15rem;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    position: relative;
+    padding: 20;
+    transition: color 0.3s ease;
+}
+
+.mynav a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.burger {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #FFD700; /* Gold underline on hover */
+    transition: all .5s;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: inline-flex;
+    }
+
+    .mynav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    .mynav a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.mynav {
+        height: 17.7rem;
+    }
+
+    #check:checked~.burger #close-icon {
+        display: block;
+    }
+
+    #check:checked~.burger #menu-icon {
+        display: none;
+    }
+
+    #check:checked~.mynav a {
+        transform: translateY(0px);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+
+/* Content Styles */
+h1 {
+    margin-top: 100px;
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#semester-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #FFF;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+#semester-dropdown:hover {
+    border-color: #0056b3;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button-container button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#marks-display {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+td {
+    background-color: #fafafa;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #f0f0f0; /* Lighten background on hover */
+}

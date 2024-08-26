@@ -1,0 +1,103 @@
+body {
+    min-height: 100vh;
+    background-color: #DFD088;
+    font-family: 'Rubik', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+}
+
+.semester-report {
+    cursor: pointer;
+}
+
+.semester-report {
+    margin-top: 20px;
+}
+
+.semester-report h2 {
+    cursor: pointer;
+}
+
+#monthly-reports h2 {
+    cursor: pointer;
+}
+
+.header img {
+    height: 60px;
+}
+
+.mynav {
+    display: flex;
+    gap: 20px;
+}
+
+.mynav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.mynav a:hover {
+    color: #16a085;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.attendance-box {
+    margin-bottom: 20px;
+}
+
+.attendance-box h2 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.attendance-box p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.period-box h3 {
+    color: #16a085;
+}
+
+.period-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.period-box ul li {
+    background-color: #ecf0f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #DFD088;
+    font-family: 'Rubik', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #ed970d;
+    color: #ed970d;
+}
+
+.dashboard {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.dashboard-title {
+    font-size: 36px;
+    color: #153448;
+    margin-bottom: 20px;
+}
+
+.dashboard-boxes {
+    display: flex;
+    gap: 20px;
+}
+
+.mynav a {
+    font-size: 1.15rem;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    position: relative;
+    padding: 20;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.box p {
+    margin: 0;
+    font-size: 18px;
+    color: #777;
+}
+
+.footer {
+    background-color: #153448;
+    color: #DFD0B8;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+  }
+  
+  body{
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: rgba(255,255,255,.75);
+    font-family: 'Rubik', sans-serif;  
+    background-color: rgb(25,25,25);  
+  }
+  
+  .line-1{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 24em;
+    margin: 0;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+  }
+
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }

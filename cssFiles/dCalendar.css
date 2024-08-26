@@ -1,0 +1,157 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: .5s;
+}
+.header:hover::after {
+    left: 100%;
+}
+
+#heading {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.mynav a {
+    font-size: 1.15rem;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    position: relative;
+    padding: 20;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.calendar .header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.calendar td.empty {
+    background-color: #f4f4f4;
+}
+
+.calendar td.holiday {
+    background-color: #d4edda;
+    color: #155724;
+    cursor: pointer;
+}
+
+.calendar td.event {
+    background-color: #cce5ff;
+    color: #004085;
+    cursor: pointer;
+}
+
+.calendar td.dayOrder {
+    background-color: #feffcc;
+    color: #000000;
+    cursor: pointer;
+}
+
+.calendar td.holiday:hover, .calendar td.event:hover, .calendar td.dayOrder:hover {
+    opacity: 0.8;
+    background-color: black;
+}
+
+.btn {
+    font-size: 18px;
+}
+
+.calendar td {
+    position: relative;
+}
+
+.calendar td.event:hover {
+    background-color: lightblue;
+}
+
+.calendar td.dayOrder:hover {
+    background-color: lightyellow;
+}
+
+.calendar td.holiday:hover {
+    background-color: lightgreen;
+}
+
+.calendar td {
+    position: relative;
+}
+
+.calendar td:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10;
+}
