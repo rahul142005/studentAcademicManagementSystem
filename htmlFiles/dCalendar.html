@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>About us</title>
-    <meta name="description" content="Student Academic Management System">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/jpeg" href="/imgFiles/websiteLogo.jpeg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="/cssFiles/dCalendar.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset = "utf-8">
 
-<body>
-    <header class="header">
-        <img src="/imgFiles/homepageIcon.png" alt="Header logo: Hindusthan College of Arts & Science" width="100" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <nav class="mynav">
-            <a href="homepage.html" style="--i:0">SAMS</a>
-            <a href="loginPage.html" style="--i:0">Log-in</a>
-            <a href="courses.html" style="--i:0">Courses</a>
-            <a href="calendar.html" style="--i:0">Academic calendar</a>
-            <a href="announcement.html" style="--i:0">Announcements</a>
-        </nav>
-    </header>
+        <title>Announcements</title>
 
-    <h1 id = "heading">Academic calendar</h1>
-    
-    <div class = "container mt-4">
-        <div class = "calendar">
-            <div class = "header1">
-                <button id="prevBtn" class="btn btn-primary">&lt;</button>
-                <h2 id="monthYear"></h2>
-                <button id="nextBtn" class="btn btn-primary">&gt;</button>
+        <meta name = "description" content = "Student Academic Management System">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "icon" type = "image/jpeg" href = "/studentAcademicManagementSystem/imgFiles/websiteLogo.jpeg">
+        <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel = "stylesheet" crossorigin = "anonymous">
+        <link href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel = "stylesheet" crossorigin = "anonymous">
+        <link href = "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel = "stylesheet">
+        <link href = "/studentAcademicManagementSystem/cssFiles/dCalendar.css" rel = "stylesheet">
+    </head>
+
+    <body>
+        <header class = "header">
+            <img src = "/studentAcademicManagementSystem/imgFiles/homepageIcon.png" alt="Header logo: Hindusthan College of Arts & Science" width = "100" style = "box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            
+            <nav class = "mynav">
+                <a href = "/studentAcademicManagementSystem/htmlFiles/homepage.html" style = "--i:0">SAMS</a>
+                <a href = "/studentAcademicManagementSystem/htmlFiles/loginPage.html" style = "--i:0">Log-in</a>
+                <a href = "/studentAcademicManagementSystem/htmlFiles/courses.html" style = "--i:0">Courses</a>
+                <a href = "/studentAcademicManagementSystem/htmlFiles/calendar.html" style = "--i:0">Academic calendar</a>
+                <a href = "/studentAcademicManagementSystem/htmlFiles/announcement.html" style = "--i:0">Announcements</a>
+            </nav>
+        </header>
+
+        <h1 id = "heading">Academic calendar</h1>
+        
+        <div class = "container mt-4">
+            <div class = "calendar">
+                <div class = "header1">
+                    <button id = "prevBtn" class = "btn btn-primary">&lt;</button>
+                    <h2 id = "monthYear"></h2>
+                    <button id = "nextBtn" class = "btn btn-primary">&gt;</button>
+                </div>
+
+                <table class = "table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>S</th>
+                            <th>M</th>
+                            <th>T</th>
+                            <th>W</th>
+                            <th>T</th>
+                            <th>F</th>
+                            <th>S</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id = "calendarBody"></tbody>
+                </table>
             </div>
-
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>S</th>
-                        <th>M</th>
-                        <th>T</th>
-                        <th>W</th>
-                        <th>T</th>
-                        <th>F</th>
-                        <th>S</th>
-                    </tr>
-                </thead>
-                <tbody id="calendarBody"></tbody>
-            </table>
         </div>
-    </div>
 
-    <script src="/jsFiles/dCalendar.js"></script>
-</body>
+        <script src = "/studentAcademicManagementSystem/jsFiles/dCalendar.js"></script>
+    </body>
 </html>
